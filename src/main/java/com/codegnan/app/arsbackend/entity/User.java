@@ -14,20 +14,16 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "user_id")
-	private Long userId;
-
+	private int userId;
 	@Column(name = "full_name")
 	@NotBlank(message = "Full Name cannot be left blank")
 	private String fullName;
-
 	@Column(name = "email")
 	@NotBlank(message = "Email cannot be left blank")
 	private String email;
-
 	@Column(name = "password")
 	@NotBlank(message = "Password cannot be left blank")
 	private String password;
-
 	@Column(name = "role")
 	@NotBlank(message = "Role cannot be left blank")
 	private String role;
@@ -35,8 +31,7 @@ public class User {
 	public User() {
 	}
 
-	
-	public User(Long userId, String fullName, String email, String password, String role) {
+	public User(int userId, String fullName, String email, String password, String role) {
 		this.userId = userId;
 		this.fullName = fullName;
 		this.email = email;
@@ -44,13 +39,11 @@ public class User {
 		this.role = role;
 	}
 
-	
-	public Long getUserId() {
+	public int getEUserId() {
 		return userId;
 	}
 
-	
-	public void setUserId(Long userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
 
@@ -81,7 +74,6 @@ public class User {
 	public String getRole() {
 		return role;
 	}
-	
 	public void setRole(String role) {
 		this.role = role;
 	}
@@ -90,4 +82,5 @@ public class User {
 	public String toString() {
 		return "User [userId=" + userId + ", fullName=" + fullName + ", email=" + email + ", password=" + password + ", role=" + role + "]";
 	}
+
 }

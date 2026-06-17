@@ -1,13 +1,14 @@
 package com.codegnan.app.arsbackend.service;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service; 
+import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.codegnan.app.arsbackend.dao.UserDao;
 import com.codegnan.app.arsbackend.entity.User;
 
-@Service 
+@Component
 public class UserService {
 
     @Autowired
@@ -18,12 +19,16 @@ public class UserService {
 
         User existingUser = userDao.findByEmail(user.getEmail());
 
+        System.out.println("Email Received: " + user.getEmail());
+        System.out.println("Existing User: " + existingUser);
+
         if (existingUser != null) {
             return false;
         }
 
         User savedUser = userDao.save(user);
 
-        return savedUser != null && savedUser.getUserId() != null;
+        return savedUser != null;
     }
+    
 }
