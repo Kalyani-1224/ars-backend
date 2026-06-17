@@ -30,5 +30,13 @@ public class UserService {
 
         return savedUser != null;
     }
+    @Transactional
+    public boolean signIn(String email, String password) {
+
+        User user =
+                userDao.findByEmailAndPassword(email, password);
+
+        return user != null;
+    }
     
 }
