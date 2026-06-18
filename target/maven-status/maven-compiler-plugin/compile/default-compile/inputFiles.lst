@@ -1,5 +1,5 @@
 C:\Users\kk427\eclipse-workspace\ars-backend\src\main\java\com\codegnan\app\arsbackend\App.java
-C:\Users\kk427\eclipse-workspace\ars-backend\src\main\java\com\codegnan\app\arsbackend\configuration\CorsFilter.java
+C:\Users\kk427\eclipse-workspace\ars-backend\src\main\java\com\codegnan\app\arsbackend\configuration\CorsConfig.java
 C:\Users\kk427\eclipse-workspace\ars-backend\src\main\java\com\codegnan\app\arsbackend\configuration\JerseyConfig.java
 C:\Users\kk427\eclipse-workspace\ars-backend\src\main\java\com\codegnan\app\arsbackend\dao\UserDao.java
 C:\Users\kk427\eclipse-workspace\ars-backend\src\main\java\com\codegnan\app\arsbackend\entity\User.java

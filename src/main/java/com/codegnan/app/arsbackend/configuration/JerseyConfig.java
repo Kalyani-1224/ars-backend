@@ -9,6 +9,5 @@ import com.codegnan.app.arsbackend.resource.UserResourceImpl;
 public class JerseyConfig extends ResourceConfig {
 	public JerseyConfig() {
 		register(UserResourceImpl.class);
-		register(CorsFilter.class);
 	}
 }
